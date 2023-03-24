@@ -1,0 +1,39 @@
+body{
+    font-family: 'Cormorant',serif;
+}
+
+.app-header{
+margin: 32px;
+}
+
+h1{
+    display: inline-block;
+    font-weight: 300;
+    margin: 0 32px 0 0;
+
+    
+}
+.app-nav{
+    display:inline-block;
+   
+}
+.app-nav ul{
+    padding: 0;
+}
+
+.app-nav li{
+    display: inline-block;
+    padding: 0;
+  
+}
+
+.app-nav a{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    margin: 0 8px 
+}
+
+a.active{
+    border-bottom: 1px solid black;
+}
