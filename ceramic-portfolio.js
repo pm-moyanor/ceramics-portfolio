@@ -17,7 +17,7 @@ const imageList = ["https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261
 "https://images.unsplash.com/photo-1605883705077-8d3d3cebe78c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
 ]
 
-const thumbnails = ["Josua Vase","larkin Plates", "Fortessa Cloud No 2", "Astoria Collection","Lava Beach Stoneware","Sand Canyon Bowls","Lennon Collection","Mendocino Dinnerware"]
+const thumbnails = ["Josua Vase","Larkin Plates", "Fortessa Cloud No 2", "Astoria Collection","Lava Beach Stoneware","Sand Canyon Bowls","Lennon Collection","Mendocino Dinnerware"]
 
 function fillArt(images, titles) {
     let index = 0;

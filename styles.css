@@ -23,7 +23,7 @@ h1 {
   padding: 0;
 }
 
-.app-nav a {
+a {
   font-size: 20px;
   color: black;
   text-decoration: none;
@@ -34,22 +34,58 @@ a.active {
   border-bottom: 1px solid black;
 }
 
-.app-card_gallery {
+.app-section_gallery {
+display: grid;
+padding: 20px 100px;
+grid-template-columns: 1fr 1fr;
+
+    
 }
 
 img {
-height: 200px;
+height: 400px;
 }
 
 .card {
-  width: 20%;
+ 
+  display :flex;
+  flex-direction: column;
+
+  /* subtracting margin/padding to prevent overflow */
+  margin: 0 30px 60px 0;
 }
 
 h2 {
   font-size: 16px;
-  margin: 0;
+ 
+  margin: 20px 0;
 }
 
 .title {
+
   display: inline;
+}
+
+.app-section_text{
+    margin-left: 100px;
+    
+}
+.app-section_text a{
+   margin: 0;
+   font-size: 24px;
+}
+
+
+p{
+    display: block;
+    width: 400px;
+    font-size: 24px;
+
+}
+.contact-box{
+    margin: 80px 100px
+}
+footer h4{
+
+margin: 0;
 }
