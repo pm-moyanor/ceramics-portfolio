@@ -3,13 +3,13 @@ body {
 }
 
 .app-header {
-  margin: 32px;
+  margin: 36px;
 }
 
 h1 {
   display: inline-block;
   font-weight: 300;
-  margin: 0 32px 0 0;
+  margin: 0 32px 8px 0;
 }
 .app-nav {
   display: inline-block;
@@ -35,57 +35,55 @@ a.active {
 }
 
 .app-section_gallery {
-display: grid;
-padding: 20px 100px;
-grid-template-columns: 1fr 1fr;
-
-    
-}
-
-img {
-height: 400px;
+  display: grid;
+  padding: 20px 40px;
+  grid-template-columns: 1fr 1fr;
 }
 
 .card {
- 
-  display :flex;
+  display: flex;
   flex-direction: column;
 
   /* subtracting margin/padding to prevent overflow */
-  margin: 0 30px 60px 0;
+  margin: 0 20px 40px 0;
+}
+
+.card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.card img:hover{
+  opacity: 0.9;
 }
 
 h2 {
   font-size: 16px;
- 
-  margin: 20px 0;
-}
-
-.title {
-
+  font-weight: 300;
+  margin: 16px 0 8px 0;
   display: inline;
 }
 
-.app-section_text{
-    margin-left: 100px;
-    
+.app-section_text {
+  margin: 0px 0 100px 100px;
+  width: 40%;
+  min-width: 500px;
 }
-.app-section_text a{
-   margin: 0;
-   font-size: 24px;
+.app-section_text a {
+  margin: 0;
+  font-size: 32px;
 }
 
+p {
+  /* display: block; */
 
-p{
-    display: block;
-    width: 400px;
-    font-size: 24px;
-
+  font-size: 32px;
+  font-weight: 300;
 }
-.contact-box{
-    margin: 80px 100px
+.contact-box {
+  margin: 80px 100px;
 }
-footer h4{
-
-margin: 0;
+footer h4 {
+  margin: 0;
 }
