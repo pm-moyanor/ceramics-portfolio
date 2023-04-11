@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/bafa5af875.js" crossorigin="anonymous"></script>
     <title>Ceramics</title>
   </head>
   <body>
@@ -75,11 +76,32 @@
         </p>
         <a href="contact.html"class="active">Let's work together</a>
       </section>
+      <section id="contact">
+        
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          
+          <button id="submit-btn" type="submit">Send</button>
+        </form>
+        
+      </section>
     </main>
     <footer>
         <div class="contact-box">
-            <h4>joseph@ceramics.com</h4>
-            <h4>(212)772-5445</h4>
+            <h4>joseph@ceramics.com | (212)772-5445</h4>
+           
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
 
     </footer>
