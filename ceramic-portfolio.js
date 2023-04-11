@@ -1,64 +1,104 @@
-const images = document.querySelectorAll('img');
+const products = [
+  {
+    image: "assets/toa-heftiba-n5jkZK-4rhs-unsplash.jpg",
+    title: "Josua Vase",
+  },
+  {
+    image: "assets/brooke-lark-uarQNKJUdJk-unsplash.jpg",
+    title: "Larkin Plates",
+  },
+  {
+    image: "assets/tom-crew-7HuTGlUfQSo-unsplash.jpg",
+    title: "Fortessa Cloud No 2",
+  },
+  {
+    image: "assets/chloe-bolton-R0qthXq3jec-unsplash.jpg",
+    title: "Astoria Collection",
+  },
+  {
+    image: " assets/vladimir-gladkov-NPPIq1XFdck-unsplash.jpg",
+    title: "Lava Beach Stoneware",
+  },
+  {
+    image: "assets/tom-crew-YA2E3d7a9Wo-unsplash (1).jpg",
+    title: "Sand Canyon Bowls",
+  },
 
-const imageList = ["https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
+  {
+    image: "assets/toa-heftiba-SrvMNmQ_T-Q-unsplash.jpg",
+    title: "Lennon Collection",
+  },
+  {
+    image: "assets/tom-crew-U9gXnSGSB3w-unsplash.jpg",
+    title: "Mendocino Dinnerware",
+  },
+];
 
-"https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
+const gallery = document.querySelector(".app-section_gallery");
 
-"https://images.unsplash.com/photo-1610701596007-11502861dcfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+products.forEach((product) => {
+  const card = document.createElement("div");
+  const img = document.createElement("img");
+  const h2 = document.createElement("h2");
+  card.classList.add("card");
+  img.classList.add("image");
+  h2.classList.add("title");
+  console.log(img);
+  img.src = product.image;
+  h2.innerText = product.title;
 
-"https://images.unsplash.com/photo-1576020799627-aeac74d58064?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2615&q=80",
+  card.appendChild(img);
+  card.appendChild(h2);
 
-"https://images.unsplash.com/photo-1525974160448-038dacadcc71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2274&q=80",
-
-"https://images.unsplash.com/photo-1610701596061-2ecf227e85b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
-
-"https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
-
-"https://images.unsplash.com/photo-1605883705077-8d3d3cebe78c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
-]
-
-const thumbnails = ["Josua Vase","Larkin Plates", "Fortessa Cloud No 2", "Astoria Collection","Lava Beach Stoneware","Sand Canyon Bowls","Lennon Collection","Mendocino Dinnerware"]
-
-function fillArt(images, titles) {
-    let index = 0;
-    images.forEach((img) => {
-      const parentDiv = document.createElement('div');
-      const h2 = document.createElement('h2');
-      h2.textContent = titles[index++];
-      h2.classList.add('title');
-      parentDiv.appendChild(img.cloneNode());
-      parentDiv.appendChild(h2);
-      parentDiv.classList.add('card');
-      img.parentNode.replaceChild(parentDiv, img);
-    });
-  }
-  
-
-fillArt(images,thumbnails)
-
-const form = document.getElementById('contact-form');
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
-  
-  // Here you can use a JavaScript library like Axios or the native Fetch API to send the form data to your backend
-  // For example, using Fetch API:
-  fetch('/api/contact', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      name,
-      email,
-      message
-    })
-  })
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error(error));
+  gallery.appendChild(card);
 });
+
+// function fillArt(artArray) {
+//   let index = 0;
+//   let img
+
+//   artArray.forEach((piece) => {
+//     console.log(piece.title,piece.image)
+//     img = piece.image
+//     const parentDiv = document.createElement('div');
+//     const h2 = document.createElement('h2');
+//     h2.textContent = piece.title;
+//     h2.classList.add('title');
+//     parentDiv.appendChild(img.cloneNode());
+//     parentDiv.appendChild(h2);
+//     parentDiv.classList.add('card');
+//     img.parentNode.replaceChild(parentDiv, img);
+//   });
+// }
+
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  fetchData(name, email, message);
+});
+
+async function fetchData(name, email, message) {
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+      }),
+    });
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
