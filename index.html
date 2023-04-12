@@ -11,11 +11,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script
-      src="https://kit.fontawesome.com/bafa5af875.js"
-      crossorigin="anonymous"
-    ></script>
+   
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <title>Ceramics</title>
+
   </head>
   <body>
     <header class="app-header">
@@ -31,6 +34,16 @@
 
     <main>
       <section class="app-section_gallery"></section>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">
+          &times;
+          </span>
+          <img id="modal-img" src="" alt="">
+          <h2 id="modal-title"></h2>
+          <p id="modal-text"></p>
+        </div>
+      </div>
       <section id="about" class="app-section_text">
         <span class="divider"></span>
         <p>
@@ -68,7 +81,9 @@
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
+       
       </div>
+      
     </footer>
     <script src="ceramic-portfolio.js" />
   </body>
