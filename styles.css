@@ -14,6 +14,9 @@ body {
   font-family: "Cormorant", serif;
 }
 
+.app-nav li:hover {
+  opacity: 0.5;
+}
 a {
   font-size: 20px;
   color: black;
@@ -21,9 +24,7 @@ a {
   margin: 0 8px;
 }
 
-a.active {
-  border-bottom: 1px solid black;
-}
+
 
 h1 {
   display: inline-block;
