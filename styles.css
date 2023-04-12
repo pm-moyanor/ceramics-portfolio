@@ -72,17 +72,18 @@ p {
 
 @media screen and (max-width: 768px) {
   .app-section_gallery {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     grid-gap: 10px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .app-section_gallery {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-gap: 5px;
+    grid-template-columns: 1fr;
+   
   }
 }
+
 
 .card {
   display: flex;
@@ -110,6 +111,9 @@ p {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.569);
+
+  animation-duration: 0.3s;
+  animation-name: fadein;
 }
 
 .modal-content {
