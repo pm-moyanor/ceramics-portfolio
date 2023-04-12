@@ -126,3 +126,23 @@ if (storedData) {
   const parsedData = JSON.parse(storedData);
   console.log(parsedData);
 }
+
+let toTopButton = document.getElementById("to-top-btn");
+
+
+window.onscroll = ()=> scrollFunction();
+
+function scrollFunction() {
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+    toTopButton.style.display = "block";
+  } else {
+    toTopButton.style.display = "none";
+  }
+}
+
+scrollFunction()
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
