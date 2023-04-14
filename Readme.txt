@@ -1,4 +1,4 @@
-Ceramist Portfolio
+##Ceramist Portfolio
 Welcome to the Ceramist Portfolio, a solo project created for submission on chingu.io as preparation for team projects.
 
 Project Description
