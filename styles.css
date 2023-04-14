@@ -28,8 +28,6 @@ body {
 }
 
 .to-top-btn:hover {
- 
- 
   background-color: #ffffff7b;
 }
 
@@ -181,10 +179,10 @@ p {
   opacity: 0;
 }
 
-.anim {
+.animation {
   animation-name: fadeInLeft;
   animation-duration: 2s;
-  animation-fill-mode: forwards; /* keeps the last frame of the animation */
+  animation-fill-mode: forwards; 
 }
 
 @keyframes fadeInLeft {
