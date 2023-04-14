@@ -1,11 +1,7 @@
 import { products } from "./products.js";
 
-console.log(products);
-
 const gallery = document.querySelector("#app-section_gallery");
-const card = document.createElement("div");
-const img = document.createElement("img");
-const h2 = document.createElement("h2");
+
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modal-img");
 const modalTitle = document.getElementById("modal-title");
@@ -15,7 +11,11 @@ const section = document.querySelector(".app-section_text");
 const form = document.getElementById("contact-form");
 let toTopButton = document.querySelector(".to-top-btn");
 
+
 products.forEach(({ image, title, description }) => {
+  const card = document.createElement("div");
+const img = document.createElement("img");
+const h2 = document.createElement("h2");
   card.classList.add("card");
   img.classList.add("image");
   h2.classList.add("title");
@@ -49,8 +49,6 @@ window.addEventListener("click", ({ target }) => {
     modal.style.display = "none";
   }
 });
-
-
 
 function checkAnimation() {
   const sectionPosition = section.getBoundingClientRect().top;
@@ -91,7 +89,7 @@ async function fetchData(name, email, message) {
       },
     };
 
-   localStorage.setItem("contactData", JSON.stringify(newData));
+    localStorage.setItem("contactData", JSON.stringify(newData));
 
     document.getElementById("name").value = "";
     document.getElementById("email").value = "";
@@ -106,7 +104,6 @@ if (storedData) {
   console.log(parsedData);
 }
 
-
 window.onscroll = () => scrollFunction();
 
 function scrollFunction() {
@@ -118,4 +115,3 @@ function scrollFunction() {
 }
 
 scrollFunction();
-
