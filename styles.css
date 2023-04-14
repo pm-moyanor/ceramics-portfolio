@@ -1,10 +1,8 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -13,9 +11,8 @@ html {
 body {
   font-family: "Cormorant", serif;
 }
-#to-top-btn {
- 
-  display: none; 
+.to-top-btn {
+  display: none;
   position: fixed;
   bottom: 20px;
   right: 30px;
@@ -26,11 +23,15 @@ body {
   padding: 10px 15px;
   cursor: pointer;
   outline-offset: none;
-
   font-size: 0.7em;
   outline: none;
 }
 
+.to-top-btn:hover {
+ 
+ 
+  background-color: #ffffff7b;
+}
 
 .app-nav li:hover {
   opacity: 0.5;
@@ -79,8 +80,7 @@ p {
   padding: 0;
 }
 
-
-.app-section_gallery {
+#app-section_gallery {
   display: grid;
   padding: 20px 40px;
   grid-template-columns: 1fr 1fr;
@@ -88,14 +88,14 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-  .app-section_gallery {
+  #app-section_gallery {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     grid-gap: 10px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .app-section_gallery {
+  #app-section_gallery {
     grid-template-columns: 1fr;
   }
 }
@@ -174,23 +174,38 @@ p {
 
 /* Text Section */
 
-.app-section_text {
+#app-section_text {
   margin: 0px 0 100px 100px;
+  min-height: 700px;
   width: 40%;
-  /* min-width: 500px; */
+  opacity: 0;
+}
 
-  animation-duration: 3s;
-  animation-name: fadein;
+.anim {
+  animation-name: fadeInLeft;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; /* keeps the last frame of the animation */
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media only screen and (min-width: 768px) {
-  .app-section_text p {
+  #app-section_text p {
     font-size: 32px;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .app-section_text p {
+  #app-section_text p {
     font-size: 24px;
   }
 }
@@ -204,7 +219,6 @@ p {
   }
 }
 
-
 .divider {
   display: block;
   width: 100%;
@@ -212,7 +226,6 @@ p {
   background-color: black;
   margin-top: 100px;
 }
-
 
 #contact {
   background: linear-gradient(rgba(3, 3, 3, 0.39), rgba(0, 0, 0, 0.361)),
