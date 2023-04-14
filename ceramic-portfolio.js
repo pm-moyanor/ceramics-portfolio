@@ -1,7 +1,6 @@
 import { products } from "./products.js";
 
 const gallery = document.querySelector("#app-section_gallery");
-
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modal-img");
 const modalTitle = document.getElementById("modal-title");
@@ -9,7 +8,7 @@ const modalText = document.getElementById("modal-text");
 const closeBtn = document.querySelector(".close");
 const section = document.querySelector(".app-section_text");
 const form = document.getElementById("contact-form");
-let toTopButton = document.querySelector(".to-top-btn");
+
 
 
 products.forEach(({ image, title, description }) => {
@@ -104,7 +103,8 @@ if (storedData) {
   console.log(parsedData);
 }
 
-window.onscroll = () => scrollFunction();
+const toTopButton = document.querySelector(".to-top-btn");
+
 
 function scrollFunction() {
   if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
@@ -113,5 +113,11 @@ function scrollFunction() {
     toTopButton.style.display = "none";
   }
 }
-
+window.onscroll = () => scrollFunction();
 scrollFunction();
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+toTopButton.addEventListener("click", topFunction);
