@@ -64,7 +64,7 @@ products.forEach(({ image, title, description }) => {
   card.classList.add("card");
   img.classList.add("image");
   h2.classList.add("title");
-  console.log(image);
+
   img.src = image;
   img.alt = title;
   h2.innerText = title;
@@ -110,7 +110,6 @@ function checkAnimation() {
 }
 
 checkAnimation();
-
 window.addEventListener("scroll", checkAnimation);
 
 
@@ -133,9 +132,11 @@ async function fetchData(name, email, message) {
 
     const newData = {
       ...previousData,
-      name,
-      email,
-      message,
+      [Date.now()]: {
+        name,
+        email,
+        message,
+      },
     };
 
     localStorage.setItem("contactData", JSON.stringify(newData));
