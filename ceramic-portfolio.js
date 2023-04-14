@@ -97,7 +97,7 @@ window.addEventListener("click", ({ target }) => {
 
 
 function checkAnimation() {
-  const section = document.querySelector("#app-section_text");
+  const section = document.querySelector(".app-section_text");
   const sectionPosition = section.getBoundingClientRect().top;
   const screenHeight = window.innerHeight;
   
